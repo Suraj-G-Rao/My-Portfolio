@@ -100,27 +100,6 @@ const Hero = () => {
       {/* Particles */}
       <CanvasParticles />
 
-      {/* Floating Tech Badges */}
-      {techIcons.map((tech, i) => (
-        <motion.div
-          key={tech.label}
-          className={`floating-badge ${floatPositions[i].size} hidden xl:flex flex-col gap-0.5 px-3 py-2 z-10`}
-          style={{
-            top: floatPositions[i].top,
-            left: floatPositions[i].left,
-            right: floatPositions[i].right,
-            '--float-duration': floatPositions[i].duration,
-            '--float-delay': floatPositions[i].delay,
-          }}
-          initial={{ opacity: 1, scale: 1 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1.5 + i * 0.1, duration: 0.5, type: 'spring' }}
-        >
-          <span className="text-xl">{tech.emoji}</span>
-          <span className="text-[9px] font-medium text-gray-400 leading-none">{tech.label}</span>
-        </motion.div>
-      ))}
-
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 flex flex-col lg:flex-row items-center gap-16 w-full">
         {/* Left: Text */}
@@ -286,30 +265,6 @@ const Hero = () => {
                 className="w-full h-full object-cover rounded-full"
               />
             </div>
-            {/* Badge - bottom right */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -bottom-4 -right-4 glass-dark rounded-2xl px-4 py-2.5 flex items-center gap-2 shadow-xl"
-            >
-              <span className="text-xl">🤖</span>
-              <div>
-                <p className="text-xs font-bold text-white">AI/ML</p>
-                <p className="text-[10px] text-gray-400">Engineer</p>
-              </div>
-            </motion.div>
-            {/* Badge - top left */}
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-              className="absolute -top-4 -left-4 glass-dark rounded-2xl px-3 py-2 flex items-center gap-2 shadow-xl"
-            >
-              <span className="text-lg">⚡</span>
-              <div>
-                <p className="text-xs font-bold text-white">9.46</p>
-                <p className="text-[10px] text-gray-400">CGPA</p>
-              </div>
-            </motion.div>
           </div>
         </motion.div>
       </div>
