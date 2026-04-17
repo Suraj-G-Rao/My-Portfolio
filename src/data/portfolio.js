@@ -18,7 +18,7 @@ export const stats = [
   { label: "Major Projects", value: 3, suffix: "+", icon: "🚀" },
   { label: "Internships / Roles", value: 2, suffix: "+", icon: "💼" },
   { label: "CGPA", value: 9.46, suffix: "/10", icon: "🎓", decimals: 2 },
-  { label: "Hackathon Winner", value: 1, suffix: "st", icon: "🏆" },
+  { label: "District Chess Player", value: 1, suffix: "x", icon: "♟️" },
 ];
 
 export const skills = {
@@ -152,18 +152,32 @@ export const projects = [
 
 export const achievements = [
   {
-    title: "1st Place",
-    event: "NITK Software & Systems Security Bootcamp",
-    description: "Secured top position at the prestigious NIT Karnataka security-focused bootcamp.",
+    title: "NITK Surathkal Hackathon Winner",
+    event: "Software & Systems Security Bootcamp",
+    date: "Feb 2025",
+    badge: "🏆 1st Place",
+    description: "Secured 1st place at NITK Surathkal in a competitive Software & Systems Security Bootcamp by building an AI-driven cyber threat detection system using Reinforcement Learning and Knowledge Graphs.",
     icon: "🥇",
     color: "#F59E0B",
     gradient: "from-yellow-500/20 to-orange-500/10",
   },
   {
-    title: "State-Level Winner",
-    event: "SAP Hackathon 2025",
-    description: "Won at the state level in the SAP Hackathon 2025 with an innovative AI solution.",
-    icon: "🏆",
+    title: "Rags to Riches Competition Winner",
+    event: "Entrepreneurship Competition (Onyx E-Cell)",
+    date: "Jan 2024",
+    badge: "🏆 1st Place",
+    description: "Won 1st place in a business simulation competition by maximizing returns from ₹100 seed capital through strategic decision-making and execution.",
+    icon: "💰",
+    color: "#10B981",
+    gradient: "from-emerald-500/20 to-green-500/10",
+  },
+  {
+    title: "District-Level Chess Player",
+    event: "Competitive Chess",
+    date: "Aug 2019",
+    badge: "♟ Chess",
+    description: "Achieved district-level recognition in chess, demonstrating strong strategic thinking, analytical ability, and decision-making skills.",
+    icon: "♟️",
     color: "#4483BE",
     gradient: "from-blue-500/20 to-cyan-500/10",
   },
@@ -180,7 +194,7 @@ export const leadership = [
         period: "Nov 2024 – May 2025",
         current: true,
         description:
-          "Contributed to the initial setup and development phase of the ALPHA Innovation and Tinkerers' Lab. Assisted in establishing the foundation by supporting planning, coordination, and early-stage activities, while collaborating with team members to build an environment focused on innovation, hands-on learning, and project development.",
+          "Contributed to the initial setup and development phase, establishing the foundation by supporting planning, coordination, and early-stage activities to build an environment focused on innovation and hands-on learning.",
       },
       {
         title: "Student Council Member",
@@ -201,7 +215,7 @@ export const leadership = [
         period: "Nov 2024 – May 2025",
         current: true,
         description:
-          "Contributed to organizing technical events and workshops focused on Machine Learning, while mentoring peers and juniors by guiding them in starting their journey in ML concepts and projects. Collaborated with team members to support community engagement and knowledge-sharing initiatives within the club.",
+          "Organized technical events and workshops focused on Machine Learning, while mentoring peers and juniors in ML concepts and projects. Supported community engagement and knowledge-sharing initiatives.",
       },
       {
         title: "Volunteer",
@@ -222,7 +236,7 @@ export const leadership = [
         period: "Apr 2024",
         current: false,
         description:
-          "Addressed final-year BCA students on artificial intelligence and its practical applications, covering topics like natural language processing and machine learning. Guided by M J Yogesh sir during this training session.",
+          "Addressed final-year BCA students on AI and its practical applications, covering NLP and ML topics. Guided by M J Yogesh sir during this session.",
       },
     ],
   },
