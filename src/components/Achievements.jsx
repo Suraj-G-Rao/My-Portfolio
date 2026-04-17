@@ -5,14 +5,15 @@ import { SectionHeader } from './About';
 
 const AchievementCard = ({ item, index }) => (
   <motion.div
-    initial={{ opacity: 1, scale: 1 }}
-    animate={{ opacity: 1, scale: 1 }}
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: '-50px' }}
     transition={{ duration: 0.5, delay: index * 0.15 }}
     whileHover={{ scale: 1.03, y: -6 }}
     className="glass-card rounded-3xl p-8 relative overflow-hidden text-center group"
   >
     <div
-      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
       style={{ background: `radial-gradient(circle at center, ${item.color}12, transparent 70%)` }}
     />
     <div
@@ -33,11 +34,29 @@ const AchievementCard = ({ item, index }) => (
 
     <h3 className="text-2xl font-black text-white mb-1 relative z-10">{item.title}</h3>
     <p
-      className="text-sm font-semibold mb-4 relative z-10"
+      className="text-sm font-semibold mb-2 relative z-10"
       style={{ color: item.color }}
     >
       {item.event}
     </p>
+
+    {/* Date + Badge row */}
+    <div className="flex items-center justify-center gap-3 mb-4 relative z-10">
+      <span className="text-xs text-gray-500">{item.date}</span>
+      {item.badge && (
+        <span
+          className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full"
+          style={{
+            background: `${item.color}18`,
+            color: item.color,
+            border: `1px solid ${item.color}30`,
+          }}
+        >
+          {item.badge}
+        </span>
+      )}
+    </div>
+
     <p className="text-gray-400 text-sm leading-relaxed relative z-10">{item.description}</p>
   </motion.div>
 );
@@ -191,10 +210,10 @@ const Achievements = () => {
       <div className="blob-3" style={{ bottom: '20%', left: '-5%', opacity: 0.4 }} />
 
       <div className="max-w-7xl mx-auto px-6">
-        <SectionHeader subtitle="Recognition & Impact" title="Achievements &" accent="Leadership" />
+        <SectionHeader subtitle="Recognition & Impact" title="" accent="Achievements" />
 
         {/* Achievements Row */}
-        <div className="grid sm:grid-cols-2 gap-7 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 mb-16">
           {achievements.map((item, i) => (
             <AchievementCard key={item.title} item={item} index={i} />
           ))}
