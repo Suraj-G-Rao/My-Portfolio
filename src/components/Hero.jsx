@@ -5,6 +5,7 @@ import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { Link } from 'react-scroll';
 import { personalInfo, techIcons } from '../data/portfolio';
+import profileImg from '../assets/profile.jpg';
 
 const socialLinks = [
   { icon: FaGithub, href: personalInfo.github, label: 'GitHub', color: '#fff' },
@@ -257,7 +258,7 @@ const Hero = () => {
           <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
             {/* Spinning ring */}
             <div
-              className="absolute inset-[-12px] rounded-full animate-spin-slow"
+              className="absolute inset-[-12px] rounded-full animate-spin-slow z-0"
               style={{
                 background: 'conic-gradient(from 0deg, #4483BE, #7C3AED, #06B6D4, #4483BE)',
                 padding: '2px',
@@ -268,7 +269,7 @@ const Hero = () => {
             </div>
             {/* Glow */}
             <div
-              className="absolute inset-0 rounded-full animate-pulse-slow"
+              className="absolute inset-0 rounded-full animate-pulse-slow z-[1]"
               style={{
                 background: 'radial-gradient(circle, rgba(68,131,190,0.3) 0%, transparent 70%)',
                 filter: 'blur(20px)',
@@ -276,17 +277,14 @@ const Hero = () => {
             />
             {/* Profile */}
             <div
-              className="relative w-full h-full rounded-full overflow-hidden glow-border"
+              className="relative z-[5] w-full h-full rounded-full overflow-hidden"
               style={{ border: '3px solid rgba(68,131,190,0.3)' }}
             >
-              <div
-                className="w-full h-full flex items-center justify-center rounded-full"
-                style={{
-                  background: 'linear-gradient(135deg, #1A2333 0%, #111827 40%, #1E2D42 100%)',
-                }}
-              >
-                <span className="text-8xl select-none">👨‍💻</span>
-              </div>
+              <img
+                src={profileImg}
+                alt="Suraj G Rao"
+                className="w-full h-full object-cover rounded-full"
+              />
             </div>
             {/* Badge - bottom right */}
             <motion.div
