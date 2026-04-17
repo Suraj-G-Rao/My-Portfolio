@@ -58,9 +58,9 @@ const Contact = () => {
                 className="absolute top-0 left-0 w-full h-1"
                 style={{ background: 'linear-gradient(90deg, #4483BE, #7C3AED, #06B6D4)' }}
               />
-              <h3 className="text-xl font-bold text-white mb-3">Open to Opportunities</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Let's Build Something Amazing</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                I'm actively looking for internships, research roles, and full-time positions in AI/ML, deep learning, or software engineering. Let's talk!
+                Whether you have a project idea, a research collaboration, or just want to chat about AI/ML and tech — I'd love to hear from you. Great things start with a conversation!
               </p>
             </div>
 
