@@ -83,7 +83,7 @@ const Navbar = () => {
                 to={link.to}
                 smooth
                 duration={600}
-                offset={-100}
+                offset={-120}
                 className={`nav-link ${activeSection === link.to ? 'active' : ''} cursor-pointer`}
               >
                 {link.label}
@@ -140,7 +140,7 @@ const Navbar = () => {
                       to={link.to}
                       smooth
                       duration={600}
-                      offset={-100}
+                      offset={-120}
                       onClick={() => setMenuOpen(false)}
                       className={`block py-2.5 px-3 rounded-lg text-sm font-medium transition-all cursor-pointer ${
                         activeSection === link.to

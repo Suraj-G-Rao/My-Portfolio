@@ -17,6 +17,10 @@
     scrollbar-color: #4483BE #111827;
   }
 
+  section[id] {
+    scroll-margin-top: 120px;
+  }
+
   html::-webkit-scrollbar {
     width: 6px;
   }

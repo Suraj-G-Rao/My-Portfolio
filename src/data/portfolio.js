@@ -18,7 +18,7 @@ export const stats = [
   { label: "Major Projects", value: 3, suffix: "+", icon: "🚀" },
   { label: "Internships / Roles", value: 2, suffix: "+", icon: "💼" },
   { label: "CGPA", value: 9.46, suffix: "/10", icon: "🎓", decimals: 2 },
-  { label: "District Chess Player", value: 1, suffix: "x", icon: "♟️" },
+  { label: "NITK Hackathon Winner", value: 1, suffix: "st", icon: "🏆" },
 ];
 
 export const skills = {
