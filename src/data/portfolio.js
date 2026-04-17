@@ -73,7 +73,8 @@ export const experience = [
   {
     role: "Trainee Software Engineer",
     company: "LCode Technologies Private Limited",
-    period: "Jan 2026 – Present",
+    period: "Jan 2026 – Jun 2026",
+    duration: "6 months",
     type: "Industry",
     color: "#4483BE",
     icon: "💼",
@@ -87,6 +88,7 @@ export const experience = [
     role: "Research Intern",
     company: "National Institute of Technology Karnataka (NITK), Surathkal",
     period: "Dec 2024 – Feb 2025",
+    duration: "3 months",
     type: "Research",
     color: "#7C3AED",
     icon: "🔬",
@@ -99,7 +101,8 @@ export const experience = [
   {
     role: "Placement Coordinator",
     company: "The National Institute of Engineering, Mysore",
-    period: "Dec 2024 – Present",
+    period: "Dec 2024 – May 2026",
+    duration: "1 yr 6 months",
     type: "Leadership",
     color: "#06B6D4",
     icon: "🎓",
