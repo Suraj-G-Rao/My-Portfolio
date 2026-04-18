@@ -38,9 +38,9 @@ class ErrorBoundary extends Component {
 
 const SectionContainer = ({ id, sectionName, children }) => (
   <ErrorBoundary sectionName={sectionName}>
-    <div id={id} style={{ minHeight: '100vh', backgroundColor: '#0B0F19', paddingTop: '120px', paddingBottom: '80px', position: 'relative' }}>
+    <section id={id} className="scroll-mt-20 pt-20 pb-20 min-h-screen bg-[#0B0F19] relative">
       {children}
-    </div>
+    </section>
   </ErrorBoundary>
 );
 

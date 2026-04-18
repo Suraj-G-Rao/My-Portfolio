@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import { Link } from 'react-scroll';
+
+const NAV_HEIGHT = 80;
 
 const navLinks = [
   { label: 'Home', to: 'hero' },
@@ -20,27 +22,48 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeSection, setActiveSection] = useState('hero');
+  const observerRef = useRef(null);
 
+  // Scroll progress + scrolled state
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       setScrolled(scrollY > 50);
-
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      setScrollProgress((scrollY / totalHeight) * 100);
-
-      // Active section detection
-      const sections = navLinks.map(link => link.to);
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sections[i]);
-        if (el && el.getBoundingClientRect().top <= 120) {
-          setActiveSection(sections[i]);
-          break;
-        }
-      }
+      setScrollProgress(totalHeight > 0 ? (scrollY / totalHeight) * 100 : 0);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Intersection Observer for active section detection
+  useEffect(() => {
+    const sectionIds = navLinks.map(link => link.to);
+    const observers = [];
+
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              setActiveSection(id);
+            }
+          });
+        },
+        {
+          rootMargin: `-${NAV_HEIGHT}px 0px -50% 0px`,
+          threshold: 0,
+        }
+      );
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    observerRef.current = observers;
+    return () => observers.forEach(o => o.disconnect());
   }, []);
 
   return (
@@ -61,7 +84,7 @@ const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
-          <Link to="hero" smooth duration={600} className="cursor-pointer">
+          <Link to="hero" smooth duration={600} offset={0} className="cursor-pointer">
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="flex items-center gap-2"
@@ -84,7 +107,8 @@ const Navbar = () => {
                 to={link.to}
                 smooth
                 duration={600}
-                offset={-120}
+                offset={0}
+                spy
                 className={`nav-link ${activeSection === link.to ? 'active' : ''} cursor-pointer`}
               >
                 {link.label}
@@ -141,7 +165,8 @@ const Navbar = () => {
                       to={link.to}
                       smooth
                       duration={600}
-                      offset={-120}
+                      offset={0}
+                      spy
                       onClick={() => setMenuOpen(false)}
                       className={`block py-2.5 px-3 rounded-lg text-sm font-medium transition-all cursor-pointer ${
                         activeSection === link.to
