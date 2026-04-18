@@ -67,16 +67,12 @@ const Contact = () => {
             {/* Social Links */}
             <div className="grid grid-cols-1 gap-3">
               {socialLinks.map((link, i) => (
-                <motion.a
+                <a
                   key={link.label}
                   href={link.href}
                   target={link.label !== 'Email' ? '_blank' : undefined}
                   rel="noopener noreferrer"
-                  initial={{ opacity: 1, x: 0 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.08 }}
-                  whileHover={{ x: 6 }}
-                  className="glass-card rounded-2xl p-4 flex items-center gap-3 group"
+                  className="glass-card rounded-2xl p-4 flex items-center gap-3 group hover:translate-x-1.5 transition-transform duration-200"
                 >
                   <div
                     className="w-10 h-10 rounded-xl flex items-center justify-center text-white flex-shrink-0 transition-all duration-300"
@@ -90,7 +86,7 @@ const Contact = () => {
                   <svg className="w-4 h-4 text-gray-600 ml-auto group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
-                </motion.a>
+                </a>
               ))}
             </div>
           </motion.div>
