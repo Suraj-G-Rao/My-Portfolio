@@ -9,6 +9,7 @@ import Leadership from './components/Leadership';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Loader from './components/Loader';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState, Component } from 'react';
 
@@ -44,64 +45,6 @@ const SectionContainer = ({ id, sectionName, children }) => (
   </ErrorBoundary>
 );
 
-// ── Preloader ──────────────────────────────────────────────────────────────────
-const Preloader = ({ done }) => (
-  <AnimatePresence mode="wait">
-    {!done && (
-      <motion.div
-        initial={{ opacity: 1 }}
-        exit={{ opacity: 0, scale: 1.05 }}
-        transition={{ duration: 0.6, ease: 'easeInOut' }}
-        className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-dark"
-        style={{ background: '#0B0F19' }}
-      >
-        {/* Animated logo */}
-        <motion.div
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ duration: 0.7, type: 'spring', stiffness: 200 }}
-          className="w-20 h-20 rounded-2xl flex items-center justify-center text-4xl font-black mb-6 relative"
-          style={{ background: 'linear-gradient(135deg, #4483BE, #7C3AED)' }}
-        >
-          S
-          {/* Pulse ring */}
-          <div
-            className="absolute inset-0 rounded-2xl animate-ping"
-            style={{ background: 'rgba(68,131,190,0.3)' }}
-          />
-        </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="gradient-text-static text-xl font-bold tracking-widest"
-        >
-          Suraj G Rao
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="text-gray-500 text-xs mt-2 tracking-wider uppercase"
-        >
-          AI/ML Engineer
-        </motion.p>
-
-        {/* Loading bar */}
-        <div className="mt-8 w-48 h-0.5 rounded-full overflow-hidden bg-white/5">
-          <motion.div
-            initial={{ width: '0%' }}
-            animate={{ width: '100%' }}
-            transition={{ duration: 1.2, ease: 'easeInOut' }}
-            className="h-full rounded-full"
-            style={{ background: 'linear-gradient(90deg, #4483BE, #7C3AED, #06B6D4)' }}
-          />
-        </div>
-      </motion.div>
-    )}
-  </AnimatePresence>
-);
 
 // ── Back-to-top button ─────────────────────────────────────────────────────────
 const BackToTop = () => {
@@ -155,17 +98,11 @@ const Divider = () => (
 function App() {
   const [loaded, setLoaded] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setLoaded(true), 1600);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <>
-      <Preloader done={loaded} />
-
-      <div className="min-h-screen bg-dark" style={{ position: 'relative', zIndex: 1 }}>
-        <Navbar />
+      {loaded ? (
+        <div className="min-h-screen bg-dark" style={{ position: 'relative', zIndex: 1 }}>
+          <Navbar />
 
         <main>
           <ErrorBoundary sectionName="Hero">
@@ -208,6 +145,9 @@ function App() {
         <Footer />
         <BackToTop />
       </div>
+      ) : (
+        <Loader onComplete={() => setLoaded(true)} />
+      )}
     </>
   );
 }
