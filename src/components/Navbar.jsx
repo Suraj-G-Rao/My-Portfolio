@@ -10,6 +10,7 @@ const navLinks = [
   { label: 'Experience', to: 'experience' },
   { label: 'Projects', to: 'projects' },
   { label: 'Achievements', to: 'achievements' },
+  { label: 'Leadership', to: 'leadership' },
   { label: 'Education', to: 'education' },
   { label: 'Contact', to: 'contact' },
 ];
