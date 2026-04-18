@@ -18,7 +18,7 @@
   }
 
   section[id] {
-    scroll-margin-top: 120px;
+    scroll-margin-top: 80px;
   }
 
   html::-webkit-scrollbar {

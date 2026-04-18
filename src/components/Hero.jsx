@@ -169,7 +169,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-wrap gap-4 justify-center lg:justify-start mb-10"
           >
-            <Link to="projects" smooth duration={700} offset={-120}>
+            <Link to="projects" smooth duration={700} offset={0}>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
