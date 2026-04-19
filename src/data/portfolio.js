@@ -78,6 +78,7 @@ export const experience = [
     type: "Industry",
     color: "#4483BE",
     icon: "💼",
+    logo: "/logos/Lcode.jpg",
     points: [
       "Working on backend development and real-world software engineering practices",
       "Gaining hands-on exposure to enterprise software development",
@@ -92,6 +93,7 @@ export const experience = [
     type: "Research",
     color: "#7C3AED",
     icon: "🔬",
+    logo: "/logos/NITK.png",
     points: [
       "Conducted research under ISEA Phase-III initiative using neural networks",
       "Implemented encryption/decryption for training data generation",
@@ -106,6 +108,7 @@ export const experience = [
     type: "Leadership",
     color: "#06B6D4",
     icon: "🎓",
+    logo: "/logos/NIE.png",
     points: [
       "Coordinating placement activities for AI & ML Department",
       "Bridging communication between students and Training & Placement Office",
