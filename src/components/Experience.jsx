@@ -1,6 +1,39 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { experience } from '../data/portfolio';
 import { SectionHeader } from './About';
+
+const CompanyLogo = ({ src, name, color }) => {
+  const [imgError, setImgError] = useState(false);
+
+  if (!src || imgError) {
+    return (
+      <div
+        className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 text-lg font-bold"
+        style={{ background: `${color}20`, border: `1px solid ${color}40`, color }}
+      >
+        {name?.charAt(0) || '?'}
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden p-1.5"
+      style={{
+        background: '#f0f0f0',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
+      }}
+    >
+      <img
+        src={src}
+        alt={name}
+        onError={() => setImgError(true)}
+        className="w-full h-full object-contain rounded-md"
+      />
+    </div>
+  );
+};
 
 const ExperienceCard = ({ exp, index }) => (
   <motion.div
@@ -37,8 +70,8 @@ const ExperienceCard = ({ exp, index }) => (
         {/* Header */}
         <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-2xl">{exp.icon}</span>
+            <div className="flex items-center gap-3 mb-1">
+              <CompanyLogo src={exp.logo} name={exp.company} color={exp.color} />
               <h3 className="text-xl font-bold text-white">{exp.role}</h3>
             </div>
             <p className="text-gray-300 font-medium">{exp.company}</p>
