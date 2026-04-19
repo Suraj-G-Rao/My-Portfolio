@@ -1,6 +1,39 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { education } from '../data/portfolio';
 import { SectionHeader } from './About';
+
+const InstitutionLogo = ({ src, name, color }) => {
+  const [imgError, setImgError] = useState(false);
+
+  if (!src || imgError) {
+    return (
+      <div
+        className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 text-2xl"
+        style={{ background: `${color}18`, border: `1px solid ${color}30` }}
+      >
+        {name?.charAt(0) || '?'}
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 overflow-hidden p-1.5"
+      style={{
+        background: '#f0f0f0',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
+      }}
+    >
+      <img
+        src={src}
+        alt={name}
+        onError={() => setImgError(true)}
+        className="w-full h-full object-contain rounded-lg"
+      />
+    </div>
+  );
+};
 
 const EducationCard = ({ edu, index }) => (
   <motion.div
@@ -34,15 +67,7 @@ const EducationCard = ({ edu, index }) => (
 
       <div className="relative z-10 flex flex-wrap items-start justify-between gap-4">
         <div className="flex items-start gap-4">
-          <div
-            className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
-            style={{
-              background: `${edu.color}18`,
-              border: `1px solid ${edu.color}30`,
-            }}
-          >
-            {edu.icon}
-          </div>
+          <InstitutionLogo src={edu.logo} name={edu.institution} color={edu.color} />
           <div>
             <h3 className="text-lg font-bold text-white mb-1">{edu.degree}</h3>
             <p className="text-gray-300 text-sm font-medium">{edu.institution}</p>
