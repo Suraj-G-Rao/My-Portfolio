@@ -259,6 +259,7 @@ export const education = [
     score: "CGPA: 9.46/10",
     icon: "🎓",
     color: "#4483BE",
+    logo: "/logos/NIE.png",
   },
   {
     degree: "Pre-University (Science)",
@@ -267,6 +268,7 @@ export const education = [
     score: "94%",
     icon: "📖",
     color: "#7C3AED",
+    logo: "/logos/puc.png",
   },
   {
     degree: "SSLC",
@@ -275,6 +277,7 @@ export const education = [
     score: "92.16%",
     icon: "🏫",
     color: "#06B6D4",
+    logo: "/logos/school.png",
   },
 ];
 
