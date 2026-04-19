@@ -165,6 +165,7 @@ export const achievements = [
     description: "Secured 1st place at NITK Surathkal in a competitive Software & Systems Security Bootcamp by building an AI-driven cyber threat detection system using Reinforcement Learning and Knowledge Graphs.",
     icon: "🥇",
     color: "#F59E0B",
+    image: "/photos/nitk-hackathon.jpg",
     gradient: "from-yellow-500/20 to-orange-500/10",
   },
   {
@@ -175,6 +176,7 @@ export const achievements = [
     description: "Won 1st place in a business simulation competition by maximizing returns from ₹100 seed capital through strategic decision-making and execution.",
     icon: "💰",
     color: "#10B981",
+    image: "/photos/rags-to-riches.jpg",
     gradient: "from-emerald-500/20 to-green-500/10",
   },
   {
@@ -185,6 +187,7 @@ export const achievements = [
     description: "Achieved district-level recognition in chess, demonstrating strong strategic thinking, analytical ability, and decision-making skills.",
     icon: "♟️",
     color: "#4483BE",
+    image: "/photos/chess.jpeg",
     gradient: "from-blue-500/20 to-cyan-500/10",
   },
 ];
