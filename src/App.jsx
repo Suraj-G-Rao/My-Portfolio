@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Achievements from './components/Achievements';
 import Leadership from './components/Leadership';
 import Education from './components/Education';
+import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Loader from './components/Loader';
@@ -135,6 +136,10 @@ function App() {
           <Divider />
           <SectionContainer id="education" sectionName="Education">
             <Education />
+          </SectionContainer>
+          <Divider />
+          <SectionContainer id="certifications" sectionName="Certifications">
+            <Certifications />
           </SectionContainer>
           <Divider />
           <SectionContainer id="contact" sectionName="Contact">
