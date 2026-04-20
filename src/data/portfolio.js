@@ -284,6 +284,30 @@ export const education = [
   },
 ];
 
+export const certifications = [
+  {
+    title: "Complete Data Science, Machine Learning, DL, NLP Bootcamp",
+    issuer: "Udemy",
+    image: "/photos/complete-data-science.jpg",
+    credential: "https://ude.my/UC-5a625427-9e55-4bd8-a4fa-88049b8e9667",
+    color: "#4483BE",
+  },
+  {
+    title: "Unsupervised Machine Learning",
+    issuer: "IBM (via Coursera)",
+    image: "/photos/ibm.jpg",
+    credential: "https://www.coursera.org/account/accomplishments/verify/NPY427Z1YQHR",
+    color: "#7C3AED",
+  },
+  {
+    title: "Complete Generative AI Course with Langchain and Huggingface",
+    issuer: "Udemy",
+    image: "/photos/generative-ai.jpg",
+    credential: "https://ude.my/UC-ac4941ba-2340-412b-800c-b261f47ce2ce",
+    color: "#06B6D4",
+  },
+];
+
 export const techIcons = [
   { label: "Python", emoji: "🐍", color: "#3B82F6" },
   { label: "TensorFlow", emoji: "🧠", color: "#FF6F00" },
