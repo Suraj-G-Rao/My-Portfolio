@@ -197,6 +197,7 @@ export const leadership = [
     org: "ALPHA Innovation & Tinkerers' Lab",
     icon: "🔭",
     color: "#7C3AED",
+    logo: "/logos/alpha.jpg",
     roles: [
       {
         title: "Head, Department of Project Development & Research",
@@ -218,6 +219,7 @@ export const leadership = [
     org: "Anveshan NIE",
     icon: "🔍",
     color: "#06B6D4",
+    logo: "/logos/anveshan.jpg",
     roles: [
       {
         title: "Core Member",
@@ -239,6 +241,7 @@ export const leadership = [
     org: "Vidyavardhaka First Grade College, Mysuru",
     icon: "🎤",
     color: "#10B981",
+    logo: "/logos/vvfgc.jpg",
     roles: [
       {
         title: "Resource Person – AI & Applications",
