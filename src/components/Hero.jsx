@@ -126,7 +126,7 @@ const Hero = () => {
             className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-4 leading-tight"
           >
             Hi, I'm{' '}
-            <span className="gradient-text block sm:inline">Suraj G Rao</span>
+            <span className="text-white block sm:inline">Suraj G Rao</span>
           </motion.h1>
 
           <motion.div

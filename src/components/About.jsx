@@ -13,9 +13,9 @@ const SectionHeader = ({ subtitle, title, accent }) => (
     className="text-center mb-16"
   >
     <p className="text-xs font-semibold tracking-widest uppercase text-primary mb-3">{subtitle}</p>
-    <h2 className="section-title">
+    <h2 className="section-title text-white">
       {title}{' '}
-      <span className="gradient-text">{accent}</span>
+      <span className="text-white">{accent}</span>
     </h2>
   </motion.div>
 );
