@@ -25,7 +25,7 @@ export const skills = {
   "Programming Languages": {
     icon: "💻",
     color: "#4483BE",
-    items: ["Python", "Java", "C++", "C", "PL/SQL"],
+    items: ["Python", "Java", "C++", "C"],
   },
   "Frameworks & Libraries": {
     icon: "🧩",

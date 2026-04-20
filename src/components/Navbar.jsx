@@ -95,7 +95,7 @@ const Navbar = () => {
                 S
               </div>
               <span className="font-bold text-white text-lg tracking-tight hidden sm:block">
-                Suraj<span className="gradient-text-static"> G Rao</span>
+                Suraj G Rao
               </span>
             </motion.div>
           </Link>
