@@ -293,11 +293,11 @@ export const certifications = [
     color: "#4483BE",
   },
   {
-    title: "Unsupervised Machine Learning",
-    issuer: "IBM (via Coursera)",
-    image: "/photos/ibm.jpg",
-    credential: "https://www.coursera.org/account/accomplishments/verify/NPY427Z1YQHR",
-    color: "#7C3AED",
+    title: "AI Fluency: AI Capabilities & Limitations",
+    issuer: "Anthropic",
+    image: "/photos/anthropic.jpg",
+    credential: "https://verify.skilljar.com/c/p8owhpzjmjng",
+    color: "#D97757",
   },
   {
     title: "Complete Generative AI Course with Langchain and Huggingface",
