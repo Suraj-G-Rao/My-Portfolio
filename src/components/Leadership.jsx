@@ -3,6 +3,38 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { leadership } from '../data/portfolio';
 import { SectionHeader } from './About';
 
+const OrgLogo = ({ src, name, color }) => {
+  const [imgError, setImgError] = useState(false);
+
+  if (!src || imgError) {
+    return (
+      <div
+        className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 text-lg font-bold"
+        style={{ background: `${color}18`, border: `1px solid ${color}30`, boxShadow: `0 0 15px ${color}20`, color }}
+      >
+        {name?.charAt(0) || '?'}
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden p-1.5"
+      style={{
+        background: '#f0f0f0',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
+      }}
+    >
+      <img
+        src={src}
+        alt={name}
+        onError={() => setImgError(true)}
+        className="w-full h-full object-contain rounded-lg"
+      />
+    </div>
+  );
+};
+
 const OrgGroup = ({ group, index }) => {
   const [expanded, setExpanded] = useState(true);
   const isMultiRole = group.roles.length > 1;
@@ -32,16 +64,7 @@ const OrgGroup = ({ group, index }) => {
         className="flex items-center gap-4 p-6 cursor-pointer select-none"
         onClick={() => isMultiRole && setExpanded(!expanded)}
       >
-        <div
-          className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
-          style={{
-            background: `${group.color}18`,
-            border: `1px solid ${group.color}30`,
-            boxShadow: `0 0 15px ${group.color}20`,
-          }}
-        >
-          {group.icon}
-        </div>
+        <OrgLogo src={group.logo} name={group.org} color={group.color} />
         <div className="flex-1 min-w-0">
           <h3 className="text-xl font-bold text-white leading-snug">{group.org}</h3>
           <p className="text-sm text-gray-400 mt-0.5">
