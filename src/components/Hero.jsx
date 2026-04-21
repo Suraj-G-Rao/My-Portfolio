@@ -143,13 +143,13 @@ const Hero = () => {
                 2000,
                 'Generative AI Enthusiast',
                 2000,
-                'Deep Learning Practitioner',
+                'Always Learning New things',
                 2000,
               ]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
-              className="gradient-text-static"
+              className="text-white"
             />
           </motion.div>
 
