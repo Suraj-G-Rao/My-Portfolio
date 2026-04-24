@@ -57,7 +57,7 @@ const Loader = ({ onComplete }) => {
       colors: ['#4483BE', '#7C3AED', '#22D3EE'],
     });
 
-    // Continued bursts every 400ms for 3 seconds
+    // Continued bursts every 350ms for 2 seconds
     const interval = setInterval(() => {
       if (!confettiActive.current) return;
       confetti({
@@ -74,18 +74,18 @@ const Loader = ({ onComplete }) => {
         angle: 120,
         colors: ['#4483BE', '#7C3AED', '#22D3EE'],
       });
-    }, 400);
+    }, 250);
 
-    // Stop confetti after 3 seconds
+    // Stop confetti after 0.8 seconds
     const confettiTimeout = setTimeout(() => {
       clearInterval(interval);
       confettiActive.current = false;
-    }, 3000);
+    }, 800);
 
     // Step 5: Fade out loader after confetti + buffer
     const loaderTimeout = setTimeout(() => {
       if (onCompleteRef.current) onCompleteRef.current();
-    }, 3800);
+    }, 1300);
 
     return () => {
       clearInterval(interval);
@@ -157,7 +157,7 @@ const Loader = ({ onComplete }) => {
           <motion.div
             initial={{ width: '0%' }}
             animate={{ width: '100%' }}
-            transition={{ duration: 2, ease: 'easeInOut' }}
+            transition={{ duration: 1.1, ease: 'easeInOut' }}
             className="h-full rounded-full"
             style={{ background: 'linear-gradient(90deg, #4483BE, #7C3AED, #06B6D4)' }}
           />
