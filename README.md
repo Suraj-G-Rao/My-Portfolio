@@ -201,7 +201,7 @@ This project is open source and available for personal use.
 
 <div align="center">
 
-**⭐ If you like this portfolio, give it a star!**
+**⭐ If you like this portfolio, give it a star**
 
 Built with ❤️ by [Suraj G Rao](https://github.com/Suraj-G-Rao)
 
