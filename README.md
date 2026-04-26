@@ -177,8 +177,7 @@ This project is deployed on **Vercel**. To deploy your own version:
 
 - **Netlify**: Connect your GitHub repo and enable automatic deploys
 - **GitHub Pages**: Use `npm run build` and deploy the `dist` folder
-- **AWS S3**: Upload the `dist` folder to an S3 bucket with CloudFront
-
+  
 ---
 
 ## 📄 License
