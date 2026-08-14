@@ -321,6 +321,20 @@ export const certifications = [
     credential: "https://ude.my/UC-ac4941ba-2340-412b-800c-b261f47ce2ce",
     color: "#06B6D4",
   },
+  {
+    title: "Complete MLOps Bootcamp With 10+ End To End ML Projects",
+    issuer: "Udemy",
+    image: "/photos/MLOps Bootcamp.jpeg",
+    credential: "https://ude.my/UC-3efdf53f-0914-4bb6-9971-333fdb708003",
+    color: "#7C3AED",
+  },
+  {
+    title: "Complete Data Analyst Bootcamp From Basics To Advanced",
+    issuer: "Udemy",
+    image: "/photos/Data Analyst Bootcamp.jpeg",
+    credential: "https://ude.my/UC-627a243e-f7ee-40f7-b7c2-6a44dde602aa",
+    color: "#10B981",
+  },
 ];
 
 export const techIcons = [
