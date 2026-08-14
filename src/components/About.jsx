@@ -136,7 +136,7 @@ const About = () => {
               <div>
                 <p className="text-white font-semibold">B.E. in CSE (AI & ML)</p>
                 <p className="text-gray-400 text-sm">The National Institute of Engineering, Mysore</p>
-                <p className="text-primary text-sm font-medium mt-0.5">2022 – 2026 · CGPA 9.46/10</p>
+                <p className="text-primary text-sm font-medium mt-0.5">2022 – 2026 · CGPA 9.45/10</p>
               </div>
             </motion.div>
           </div>

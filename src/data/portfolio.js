@@ -17,7 +17,7 @@ export const personalInfo = {
 export const stats = [
   { label: "Major Projects", value: 3, suffix: "+", icon: "🚀" },
   { label: "Internships / Roles", value: 2, suffix: "+", icon: "💼" },
-  { label: "CGPA", value: 9.46, suffix: "/10", icon: "🎓", decimals: 2 },
+  { label: "CGPA", value: 9.45, suffix: "/10", icon: "🎓", decimals: 2 },
   { label: "NITK Hackathon Winner", value: 1, suffix: "st", icon: "🏆" },
 ];
 
@@ -70,6 +70,21 @@ export const skills = {
 };
 
 export const experience = [
+  {
+    role: "Associate Software Engineer",
+    company: "New Relic",
+    period: "Aug 2026 – Present",
+    duration: "Hyderabad, Telangana, India · Hybrid",
+    type: "Full-time",
+    color: "#008C99",
+    icon: "💼",
+    logo: "/logos/newrelic.svg",
+    points: [
+      "Working as an Associate Software Engineer in New Relic's AI Monitoring team",
+      "Contributing to AI/ML-focused monitoring and observability solutions",
+      "Working on real-world software engineering and monitoring technologies",
+    ],
+  },
   {
     role: "Trainee Software Engineer",
     company: "LCode Technologies Private Limited",
@@ -259,7 +274,7 @@ export const education = [
     degree: "Bachelor of Engineering – CSE (AI & ML)",
     institution: "The National Institute of Engineering, Mysore",
     period: "2022 – 2026",
-    score: "CGPA: 9.46/10",
+    score: "CGPA: 9.45/10",
     icon: "🎓",
     color: "#4483BE",
     logo: "/logos/NIE.png",
