@@ -335,6 +335,34 @@ export const certifications = [
     credential: "https://ude.my/UC-627a243e-f7ee-40f7-b7c2-6a44dde602aa",
     color: "#10B981",
   },
+  {
+    title: "MCP Bootcamp – Model Context Protocol & AI Tool Integration",
+    issuer: "Udemy",
+    image: "/photos/mcp-bootcamp.jpeg",
+    credential: "https://www.udemy.com/certificate/UC-f69ded2f-7615-4d04-99ba-350367d41986/",
+    color: "#F59E0B",
+  },
+  {
+    title: "RAG Bootcamp – Retrieval Augmented Generation",
+    issuer: "Udemy",
+    image: "/photos/rag-bootcamp.jpeg",
+    credential: "https://www.udemy.com/certificate/UC-23d45291-7c67-4d7e-a8bb-9791c6f0e5ab/",
+    color: "#06B6D4",
+  },
+  {
+    title: "Agentic AI Bootcamp – Build Autonomous AI Agents",
+    issuer: "Udemy",
+    image: "/photos/agentic-ai-bootcamp.jpeg",
+    credential: "https://www.udemy.com/certificate/UC-1770d179-efe7-4ede-b504-0525fb15ce41/",
+    color: "#7C3AED",
+  },
+  {
+    title: "AI Security Bootcamp – Guardrails, LLM Gateways & Observability",
+    issuer: "Udemy",
+    image: "/photos/ai-security-bootcamp.jpeg",
+    credential: "https://www.udemy.com/certificate/UC-53771393-82d1-41a6-b757-1183eb54ef74/",
+    color: "#EF4444",
+  },
 ];
 
 export const techIcons = [
