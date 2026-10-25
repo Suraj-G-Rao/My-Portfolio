@@ -120,7 +120,7 @@ const Navbar = () => {
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <motion.a
-              href="https://drive.google.com/file/d/16jsDt2T4MP32RdXz_zibFd4l33BMhqky/view?usp=sharing"
+              href="https://drive.google.com/file/d/1oXhoyqYaECcofsdHh_LqUYUHgzRzY8Cm/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
@@ -183,7 +183,7 @@ const Navbar = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
-                  href="https://drive.google.com/file/d/16jsDt2T4MP32RdXz_zibFd4l33BMhqky/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1oXhoyqYaECcofsdHh_LqUYUHgzRzY8Cm/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary text-center mt-2 justify-center"

@@ -11,7 +11,7 @@ export const personalInfo = {
   instagram: "https://www.instagram.com/_suraj.rao_",
   twitter: "https://x.com/SurajGRao020",
   resume:
-    "https://drive.google.com/file/d/16jsDt2T4MP32RdXz_zibFd4l33BMhqky/view?usp=sharing",
+    "https://drive.google.com/file/d/1oXhoyqYaECcofsdHh_LqUYUHgzRzY8Cm/view?usp=drive_link",
 };
 
 export const stats = [
